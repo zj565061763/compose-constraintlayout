@@ -13,6 +13,7 @@ import androidx.constraintlayout.compose.ConstrainScope
 import androidx.constraintlayout.compose.ConstrainedLayoutReference
 import androidx.constraintlayout.compose.ConstraintLayoutScope
 import androidx.constraintlayout.compose.Dimension
+import androidx.constraintlayout.compose.Visibility
 
 /**
  * 横向参考线，距离目标[target]的top百分比[bias]，如果[target]为null默认为parent
@@ -136,4 +137,12 @@ fun ConstrainScope.fVerticallyTo(
       bottomGoneMargin = bottomGoneMargin,
       bias = bias,
    )
+}
+
+fun ConstrainScope.goneIf(condition: Boolean) {
+   visibility = if (condition) Visibility.Gone else Visibility.Visible
+}
+
+fun ConstrainScope.invisibleIf(condition: Boolean) {
+   visibility = if (condition) Visibility.Invisible else Visibility.Visible
 }
