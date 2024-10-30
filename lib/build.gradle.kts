@@ -6,7 +6,7 @@ plugins {
 
 val libGroupId = "com.sd.lib.android"
 val libArtifactId = "compose-constraintlayout"
-val libVersion = "1.0.0"
+val libVersion = "1.0.1"
 
 android {
    namespace = "com.sd.lib.compose.constraintlayout"
@@ -51,7 +51,6 @@ publishing {
          groupId = libGroupId
          artifactId = libArtifactId
          version = libVersion
-
          afterEvaluate {
             from(components["release"])
          }
