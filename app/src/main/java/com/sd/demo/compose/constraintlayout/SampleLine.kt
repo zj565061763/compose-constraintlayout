@@ -12,7 +12,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.constraintlayout.compose.Dimension
 import com.sd.demo.compose.constraintlayout.theme.AppTheme
 import com.sd.lib.compose.constraintlayout.fHorizontalLine
 import com.sd.lib.compose.constraintlayout.fVerticalLine
@@ -32,16 +31,14 @@ class SampleLine : ComponentActivity() {
 private fun Content(
    modifier: Modifier = Modifier,
 ) {
-   ConstraintLayout(
-      modifier = modifier.fillMaxSize(),
-   ) {
+   ConstraintLayout(modifier = modifier.fillMaxSize()) {
       val refBox = createRef()
       Box(
          modifier = Modifier
             .background(Color.Blue)
             .constrainAs(refBox) {
-               width = Dimension.value(100.dp)
-               height = Dimension.value(100.dp)
+               width = 100.dp.asDimension()
+               height = 100.dp.asDimension()
             },
       )
 
