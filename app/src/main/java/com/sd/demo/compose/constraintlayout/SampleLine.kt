@@ -14,7 +14,7 @@ import com.sd.demo.compose.constraintlayout.theme.AppTheme
 import com.sd.lib.compose.constraintlayout.fHorizontalLine
 import com.sd.lib.compose.constraintlayout.fVerticalLine
 
-class SampleConstrainLayout : ComponentActivity() {
+class SampleLine : ComponentActivity() {
    override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(savedInstanceState)
       setContent {
