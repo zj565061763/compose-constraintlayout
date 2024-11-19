@@ -6,7 +6,7 @@ plugins {
 
 val libGroupId = "com.sd.lib.android"
 val libArtifactId = "compose-constraintlayout"
-val libVersion = "1.0.1"
+val libVersion = "1.1.0"
 
 android {
    namespace = "com.sd.lib.compose.constraintlayout"
