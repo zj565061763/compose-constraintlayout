@@ -1,13 +1,11 @@
 package com.sd.lib.compose.constraintlayout
 
-import androidx.annotation.FloatRange
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalInspectionMode
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstrainScope
 import androidx.constraintlayout.compose.ConstrainedLayoutReference
@@ -93,50 +91,6 @@ fun ConstraintLayoutScope.fVerticalLine(
             }
       )
    }
-}
-
-/**
- * [ConstrainScope.linkTo]
- */
-fun ConstrainScope.fHorizontallyTo(
-   target: ConstrainedLayoutReference,
-   @FloatRange(from = 0.0, to = 1.0) bias: Float = 0.5f,
-   startMargin: Dp = 0.dp,
-   endMargin: Dp = 0.dp,
-   startGoneMargin: Dp = 0.dp,
-   endGoneMargin: Dp = 0.dp,
-) {
-   linkTo(
-      start = target.start,
-      end = target.end,
-      startMargin = startMargin,
-      endMargin = endMargin,
-      startGoneMargin = startGoneMargin,
-      endGoneMargin = endGoneMargin,
-      bias = bias,
-   )
-}
-
-/**
- * [ConstrainScope.linkTo]
- */
-fun ConstrainScope.fVerticallyTo(
-   target: ConstrainedLayoutReference,
-   @FloatRange(from = 0.0, to = 1.0) bias: Float = 0.5f,
-   topMargin: Dp = 0.dp,
-   bottomMargin: Dp = 0.dp,
-   topGoneMargin: Dp = 0.dp,
-   bottomGoneMargin: Dp = 0.dp,
-) {
-   linkTo(
-      top = target.top,
-      bottom = target.bottom,
-      topMargin = topMargin,
-      bottomMargin = bottomMargin,
-      topGoneMargin = topGoneMargin,
-      bottomGoneMargin = bottomGoneMargin,
-      bias = bias,
-   )
 }
 
 fun ConstrainScope.goneIf(condition: Boolean) {
